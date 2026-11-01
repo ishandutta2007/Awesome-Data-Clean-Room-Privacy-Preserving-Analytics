@@ -1,193 +1,118 @@
-# Awesome-Data-Clean-Room-Privacy-Preserving-Analytics
+# Awesome Data Clean Room & Privacy-Preserving Analytics [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-# Awesome-Data-Clean-Room-Privacy-Preserving-Analytics
-
-**Top Data Clean Room Privacy Preserving Analytics (Opensource) 🌟 Star if you like it! 🌟**
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**
-
-*Focused on TEE-Based Collaboration, Federated Analytics, Differential Privacy & Self-Hosted Clean Room Infrastructure*
-
-**Last updated: November 2026**
-
-
-
-This repository tracks notable **SaaS platforms** and **open-source projects** for **Data Clean Rooms & Privacy-Preserving Analytics**. These tools enable organizations to collaborate on sensitive datasets—matching audiences, measuring campaigns, and training models—without exposing raw data to partners—from fully managed cloud clean rooms with identity resolution to open-source TEE-based frameworks that give organizations control over their collaboration infrastructure.
-
-
-
-**Examples** include Snowflake Data Clean Rooms, Habu (LiveRamp), InfoSum, Decentriq, Optable, Samooha, AWS Clean Rooms, Google Ads Data Hub, LiveRamp Safe Haven, and Epsilon Clean Room (the category leaders in commercial space).
-
-
-
-**Open-source emphasis**: This section is expanded with every relevant project for self-hosted clean rooms, federated analytics, and open privacy infrastructure. **Critical note**: The open-source landscape is emerging—**PrivacyGo Data Clean Room (PGDCR)** from TikTok is the most complete open-source TEE-based clean room, but it is limited to one-way collaboration and GCP . **pda** provides federated statistical algorithms for healthcare research, not advertising clean rooms . **Dhara** is a test-data generator, not a clean room itself . No open-source project matches Snowflake's managed workflows or InfoSum's decentralized matching at production scale.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Snowflake Data Clean Rooms](https://www.snowflake.com/en/data-cloud/workloads/collaboration/data-clean-rooms/)**
-
-  **Native clean room** within Snowflake's AI Data Cloud. **Pricing**: **No additional Snowflake access fees** for clean room features—consumption-based credits apply; **30-day free trial with $400 in free credits** . **Free tier**: Trial only ($400 credits). **Best for**: Snowflake customers wanting governed collaboration without data movement—**trade-off**: requires Snowflake ecosystem; credit consumption scales with query volume.
-
-
-
-- **[Habu (LiveRamp Clean Room powered by Habu)](https://www.liveramp.com/)**
-
-  **Data clean room platform** for secure collaboration on combined datasets. **Pricing**: **Custom quote**; **no free trial, no free plan** . **Free tier**: None. **Best for**: advertisers and publishers wanting managed clean room collaboration—**trade-off**: no self-serve evaluation; quote-only.
-
-
-
-- **[InfoSum](https://www.infosum.com/)**
-
-  **Decentralized data collaboration** platform with **non-movement of data** architecture. **Pricing**: **No free trial, no freemium version** per TrustRadius ; quote-only. **Free tier**: None. **Best for**: organizations requiring strict data residency—**trade-off**: no trial; federated query latency (10–30s) higher than edge-based alternatives .
-
-
-
-- **[Decentriq](https://www.decentriq.com/)**
-
-  **Confidential computing clean room** platform. **Pricing**: Quote-only; limited public pricing data . **Free tier**: Not specified. **Best for**: enterprises prioritizing TEE-based confidentiality—**trade-off**: limited public pricing transparency.
-
-
-
-- **[Optable](https://optable.co/)**
-
-  **Edge-computing clean room** with built-in identity graph for advertising. **Pricing**: Quote-only. **Free tier**: Not specified. **Best for**: publishers wanting low-latency audience activation (match rates 85–95%, query latency <5s) —**trade-off**: advertising-focused; less suited for multi-party consortia.
-
-
-
-- **[AWS Clean Rooms](https://aws.amazon.com/clean-rooms/)**
-
-  **Managed clean room** within AWS. **Pricing**: **Consumption-based**—compute measured in **Clean Rooms Processing Unit (CRPU)-hours**, per-second with 10-minute minimum; **no upfront costs**; **AWS Free Tier not available for Clean Rooms ML** . **Free tier**: None for ML. **Best for**: AWS-centric organizations wanting managed clean rooms—**trade-off**: CRPU consumption requires volume modeling.
-
-
-
-- **[Google Ads Data Hub](https://adsdatahub.google.com/)**
-
-  **Clean room for Google media measurement**. **Pricing**: **Free for Google media**; Cloud costs apply for queries . **Free tier**: Free for Google media measurement. **Best for**: advertisers measuring Google campaigns—**trade-off**: Google ecosystem lock-in; pricing transparency scored 1.0/5 .
-
-
-
-- **[LiveRamp Safe Haven](https://liveramp.com/)**
-
-  **Privacy-preserving data collaboration** environment. **Pricing**: Quote-only . **Free tier**: None. **Best for**: LiveRamp customers wanting clean room collaboration—**trade-off**: tied to LiveRamp ecosystem.
-
-
-
-- **[Epsilon Clean Room](https://www.epsilon.com/emea/products-and-services/clean-room)**
-
-  **Clean room with pre-loaded data and identity**. **Features**: **46M unique UK individuals** anchored in name and address; closed-loop cross-channel measurement; person-based activation . **Pricing**: Quote-only. **Free tier**: None. **Best for**: UK marketers wanting pre-enriched data on day one—**trade-off**: Epsilon data dependency; quote-only.
-
-
-
-- **[Samooha](https://www.samooha.io/)**
-
-  **Snowflake-native clean room** platform. **Pricing**: Quote-only. **Free tier**: Not specified. **Best for**: Snowflake customers wanting a third-party clean room interface—**trade-off**: limited public information in search results.
-
-
-
-## Open-Source GitHub Projects
-
-
-
-- **[PrivacyGo Data Clean Room (PGDCR)](https://github.com/tiktok-privacy-innovation/PrivacyGo-DataCleanRoom)**
-
-  **Open-source TEE-based data clean room** (Apache-2.0) — **the most complete open-source clean room framework** found in this research, open-sourced by TikTok in June 2024 . **Features**: **Two-stage architecture**—Programming Stage (data exploration with provider-controlled protection) and Execution Stage (isolated TEE workload with attestation); **data providers manage data, code, and output space**; **JWT-based attestation** for public verification of execution integrity; **multi-cloud support** (currently GCP backend) . **Use cases**: Trusted Research Environments (TREs), advertising lookalike analysis, private ML model fine-tuning . **Tech stack**: Confidential Computing, GCP. **Deploy**: Self-hosted on cloud infrastructure. **Trade-off**: **Limited to one-way collaboration**—multi-user collaboration on roadmap; **manual data provisioning, policy, and attestation**—automation planned; **CPU-only**—GPU support planned . **Best for**: organizations wanting a TEE-based clean room they control—especially research institutions and privacy-focused data collaborations willing to accept early-stage limitations.
-
-
-
-- **[pda: Privacy-Preserving Distributed Algorithms](https://cran.r-project.org/web/packages/pda/index.html)**
-
-  **R package for federated statistical learning** (Apache-2.0) — **the most mature open-source federated analytics toolkit** for healthcare research . **Features**: **Regression, trial emulation, causal inference, clustering** across multiple data sites; **runs on a lead site** and requires only **summary statistics** from collaborating sites; **one or few iterations** for lossless results; integrates with **online data transfer system** for safe collaboration . **Tech stack**: R (Rcpp). **Deploy**: R package (CRAN). **Trade-off**: **Statistical research focus**—not advertising clean rooms or audience matching; requires R expertise. **Best for**: healthcare researchers and biostatisticians wanting federated analytics across institutions without sharing patient-level data.
-
-
-
-- **[Dhara](https://pypi.org/project/vasundhara/)**
-
-  **Synthetic multi-party dataset generator for clean room testing** (PyPI) — **the most practical open-source tool for clean room development** . **Features**: Generates **N CSV files** (one per data partner) with controlled **match ID overlap** via pairwise match rate matrix; **realistic column distributions** (categorical, integer, email, etc.); **match rate verification** in metadata; **schema inference** from CSV samples; **Audience Simulator** to preview filter impact; **reproducible via seed** . **Tech stack**: Python. **Deploy**: `pip install vasundhara`; CLI or Docker web UI. **Trade-off**: **Test data generator, not a clean room**—it helps you build and test clean rooms but does not perform privacy-preserving matching itself. **Best for**: developers building or evaluating clean room implementations—the essential testing companion for PGDCR or custom clean rooms.
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **No mature open-source advertising clean room exists beyond PGDCR.** The commercial market (Snowflake, Habu, InfoSum, Optable) is proprietary, and open-source alternatives are either TEE frameworks (PGDCR) or research tools (pda). **Dhara** fills the testing gap but not the runtime gap.
-
-
-
-**Frameworks for building custom systems**: Combine **PrivacyGo Data Clean Room** for TEE-based collaboration with **Dhara** for test data generation and **pda** for federated statistical analysis—creating a limited open-source clean room stack. **None of these match Snowflake's managed workflows or InfoSum's decentralized matching at production scale.**
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, license (for open-source), and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Data clean rooms handling customer data must comply with data protection regulations (GDPR, CCPA, etc.) and implement appropriate privacy-enhancing technologies (TEEs, differential privacy, secure multi-party computation).
-
-- **The "managed clean room" vs. "TEE framework" vs. "federated analytics" vs. "test generator" distinction is critical.** **Snowflake, Habu, InfoSum, Optable, AWS, Google, LiveRamp, and Epsilon** are **managed clean rooms**—they provide hosting, identity resolution, and workflows . **PrivacyGo Data Clean Room** is a **TEE framework**—it provides the secure execution environment but requires manual setup and currently supports only one-way collaboration . **pda** is **federated analytics**—it enables statistical learning across sites, not advertising matching . **Dhara** is a **test generator**—it creates synthetic data for clean room development, not runtime collaboration . **Choose based on whether you need managed convenience, TEE control, statistical federation, or testing support.**
-
-- **PrivacyGo Data Clean Room is the only open-source TEE clean room**, but it is **limited to one-way collaboration** and requires **manual provisioning, policy, and attestation**—automation is on the roadmap . **For organizations wanting TEE-based clean rooms today, it is the starting point; for production multi-party collaboration, commercial platforms are required.**
-
-- **InfoSum and Optable have fundamentally different architectures.** InfoSum uses **decentralized non-movement of data** with federated queries (10–30s latency, 90–99% match rates). Optable uses **edge-computing with a local identity graph** (<5s latency, 85–95% match rates) . **Choose InfoSum for strict data residency; choose Optable for low-latency publisher-advertiser activation.**
-
-- **Snowflake's clean rooms have no additional access fees**—you pay only for compute credits, with **$400 free trial credits** . **This is the most transparent pricing model in the managed clean room category.**
-
-- **Habu (LiveRamp) has no free trial or free plan** . **InfoSum has no free trial or freemium version** . **Evaluation requires sales engagement.**
-
-- **AWS Clean Rooms ML is not covered by AWS Free Tier** . **Google Ads Data Hub is free for Google media but Cloud costs apply** . **Budget for consumption costs even on "free" platforms.**
-
-- **Pricing opacity is universal** across Habu, InfoSum, Decentriq, Optable, Samooha, and Epsilon. All require sales contact or quote requests. **Snowflake, AWS, and Google publish consumption-based pricing.** **Validate with direct vendor conversations against your collaboration volume and partner count.**
-
-- Self-hosted open-source solutions require proper infrastructure (GCP for PGDCR, R for pda), security hardening for TEE attestation, and ongoing maintenance. **Clean rooms handle sensitive customer data**—ensure your deployment meets your organization's privacy and compliance requirements before onboarding partners.
-
-
+> A curated directory of enterprise SaaS Data Clean Rooms (DCR) and open-source Privacy-Preserving Analytics (PPA) frameworks — covering Trusted Execution Environments (TEEs), Confidential Computing, Differential Privacy, Federated Learning, and Multi-Party Computation (MPC).
 
 ---
 
+## Table of Contents
 
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
+- [Enterprise SaaS & Hosted Platforms](#enterprise-saas--hosted-platforms)
+- [Open-Source GitHub Projects](#open-source-github-projects)
+- [Architecture & Platform Taxonomy](#architecture--platform-taxonomy)
+- [How to Contribute](#how-to-contribute)
+- [Disclaimer](#disclaimer)
 
-**Made for data collaboration teams, privacy engineers, and organizations building transparent clean room solutions.**
+---
 
-Let's make Data Clean Rooms & Privacy-Preserving Analytics more open, data-driven, and privacy-safe.
+## Sector Overview & Market Dynamics
+
+The global Data Clean Room (DCR) and privacy-preserving collaboration market is valued at approximately **$4.0B to $4.3B in 2026** (up from ~$3.2B in 2025) and is projected to expand to **$12.1B–$14.7B by 2030**, reflecting a compound annual growth rate (CAGR) of **19.5% to 26%**. 
+
+The sector exhibits **moderate-to-high concentration among foundational cloud hyperscalers and data platforms** (AWS Clean Rooms, Google Ads Data Hub, Snowflake), while remaining **moderately fragmented across independent and vertical application layers** (confidential computing, retail media networks, and decentralized cross-cloud identity graphs). Major consolidation events—such as LiveRamp's acquisition of Habu ($200M) and its pending buyout by Publicis ($2.5B), Snowflake's acquisition of Samooha, and WPP's acquisition of InfoSum—demonstrate a steady trend toward end-to-end bundled data infrastructure.
+
+---
+
+## Enterprise SaaS & Hosted Platforms
+
+The table below outlines key commercial Data Clean Room platforms, sorted by **Company Size / Scale** (valuation or market cap descending).
+
+| Platform / Vendor | Company Size / Scale (Desc) | Pricing & Starting Cost | Free Tier & Free Trial Limits | Key Architecture & Best For |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Google Ads Data Hub](https://adsdatahub.google.com/)** | **~$2.1T Market Cap** (Alphabet) | **$0 base license fee**; billed via Google Cloud BigQuery compute/storage ($6.25/TB on-demand query scan) | **Free Sandbox environment** with synthetic mock campaign data for SQL query authoring and schema verification; 1 TiB/mo free BigQuery analysis | Walled-garden media clean room; best for large brands analyzing cross-network Google Ads, DV360, and YouTube campaign lift. |
+| **[AWS Clean Rooms](https://aws.amazon.com/clean-rooms/)** | **~$2.0T Market Cap** (Amazon) | **$2.00 per CRPU-hour** (US East, per-second billing, 60s minimum); **$4.00/CRPU-hr** with Differential Privacy; PySpark jobs have 10-min minimum | **No free tier for Clean Rooms ML**; standard AWS 12-month free tier covers core storage (S3 5 GB) but all CRPU computation incurs standard hourly fees | Cloud-native multi-party collaboration; best for AWS-centric data lakes seeking zero data movement and automated cryptographic compute isolation. |
+| **[Snowflake Data Clean Rooms](https://www.snowflake.com/en/data-cloud/workloads/collaboration/data-clean-rooms/)** | **~$110B Market Cap** / $4.68B FY26 Rev (NYSE: SNOW) | **$0 additional SaaS license fee**; consumption-based credit model starting at standard Snowflake editions (~$2.00 to $4.00 per warehouse credit-hour) | **30-day free trial with $400 in free credits** (full Snowflake ecosystem & native apps enabled) | Snowflake Native App framework (formerly Samooha); best for Snowflake-hosted enterprises running governed multi-party joins without external data replication. |
+| **[Epsilon Clean Room](https://www.epsilon.com/emea/products-and-services/clean-room)** | **$4.4B Acquisition Price** (Publicis Groupe) | **Custom annual contract quote**; enterprise private offers via AWS Marketplace typically start at **$50,000+/year** base commitment | **No free tier and no self-serve free trial**; evaluations require sales discovery and guided tenant onboarding | Identity-enriched clean room; best for brands requiring instant pre-loaded demographic and transactional graphs (46M+ unique consumer profiles). |
+| **[LiveRamp Safe Haven / Habu](https://www.liveramp.com/)** | **$2.5B Valuation** ($813M FY26 Rev, acquired by Publicis) | **Custom annual subscription quote**; baseline multi-cloud enterprise deployments typically start around **$30,000 to $50,000/year** | **No free tier and no public free trial**; proof-of-concept (PoC) scopes require enterprise sales agreements | Interoperable cross-cloud collaboration layer; best for omnichannel marketers connecting fragmented data silos across AWS, Azure, Snowflake, and Databricks. |
+| **[InfoSum](https://www.infosum.com/)** | **$300M Valuation** (Acquired by WPP; $93M+ venture funding) | **Custom enterprise license quote**; annual private software contracts typically range from **$50,000 to $150,000+/year** based on bunker nodes | **No free tier, no freemium plan, and no public free trial**; evaluation conducted strictly via sales-guided architectural validation | Decentralized "non-movement of data" bunker network; best for organizations demanding absolute mathematical data residency and zero cross-party matching keys. |
+| **[Optable](https://optable.co/)** | **$100M–$250M Valuation** ($20M Series A Acceleration round) | **Custom annual SaaS quote**; flat-rate infrastructure subscription based on identity volume with 0% take-rate on direct marketplace transactions | **No free tier and no self-serve free trial**; private sandbox sandpits provided solely under commercial evaluation pilots | Edge-computing clean room and identity resolution suite; best for media publishers and ad networks activating first-party audiences with sub-5s latency. |
+| **[Decentriq](https://www.decentriq.com/)** | **$50M–$100M Valuation** ($25M total funding raised) | **Custom enterprise subscription quote**; typical confidential computing tenant deployments start at **$48,000 to $50,000+/year** | **No free tier and no public free trial**; live sandbox demos and security audits provisioned upon enterprise technical review | Hardware-enforced confidential computing clean room (Intel SGX / AMD SEV); best for healthcare, banking, and data consortia requiring hardware-level encryption. |
+
+---
+
+## Open-Source GitHub Projects
+
+Curated list of open-source data clean room engines, confidential computing runtimes, federated learning frameworks, and differential privacy libraries. 
+
+Repositories are sorted by **GitHub Stars (Descending)**.
+
+| Project / Repository | GitHub Stars (Desc) | Technology & Ecosystem | Primary Architecture & Description |
+| :--- | :---: | :--- | :--- |
+| **[OpenMined/PySyft](https://github.com/OpenMined/PySyft)** | [![Stars](https://img.shields.io/github/stars/OpenMined/PySyft?style=social&color=white)](https://github.com/OpenMined/PySyft/stargazers) | Python, Domain Networks | Federated data governance framework enabling data scientists to query remote, protected datasets using Differential Privacy and secure remote computation without seeing raw records. |
+| **[flwrlabs/flower](https://github.com/flwrlabs/flower)** | [![Stars](https://img.shields.io/github/stars/flwrlabs/flower?style=social&color=white)](https://github.com/flwrlabs/flower/stargazers) | Python, C++, Mobile/Edge | Unified federated AI and analytics framework designed to scale privacy-preserving model training and compute workloads across millions of distributed edge clients and multi-tenant data silos. |
+| **[FederatedAI/FATE](https://github.com/FederatedAI/FATE)** | [![Stars](https://img.shields.io/github/stars/FederatedAI/FATE?style=social&color=white)](https://github.com/FederatedAI/FATE/stargazers) | Python, C++, Java | Industrial-grade federated learning platform implementing secure multi-party computation (MPC), homomorphic encryption, and federated feature engineering for enterprise banking and cross-silo analytics. |
+| **[FedML-AI/FedML](https://github.com/FedML-AI/FedML)** | [![Stars](https://img.shields.io/github/stars/FedML-AI/FedML?style=social&color=white)](https://github.com/FedML-AI/FedML/stargazers) | Python, PyTorch | Open platform and cross-cloud scheduler for distributed machine learning and federated training across decentralized nodes and heterogeneous hardware accelerators. |
+| **[google/differential-privacy](https://github.com/google/differential-privacy)** | [![Stars](https://img.shields.io/github/stars/google/differential-privacy?style=social&color=white)](https://github.com/google/differential-privacy/stargazers) | C++, Go, Java | Production-tested differential privacy libraries powering Google Ads Data Hub and internal analytics; includes Laplace/Gaussian noise mechanisms, DP SQL query building, and stochastic accounting. |
+| **[secretflow/secretflow](https://github.com/secretflow/secretflow)** | [![Stars](https://img.shields.io/github/stars/secretflow/secretflow?style=social&color=white)](https://github.com/secretflow/secretflow/stargazers) | Python, C++ | Comprehensive privacy-preserving computing framework integrating Secure Multi-Party Computation (PPU), Homomorphic Encryption (HE), Trusted Execution Environments (TEEs), and Differential Privacy. |
+| **[meta-pytorch/opacus](https://github.com/meta-pytorch/opacus)** | [![Stars](https://img.shields.io/github/stars/meta-pytorch/opacus?style=social&color=white)](https://github.com/meta-pytorch/opacus/stargazers) | Python, PyTorch | High-speed library for training PyTorch models with Differential Privacy (DP-SGD), enabling private model training with strict mathematical epsilon guarantees and minimal performance overhead. |
+| **[enarx/enarx](https://github.com/enarx/enarx)** | [![Stars](https://img.shields.io/github/stars/enarx/enarx?style=social&color=white)](https://github.com/enarx/enarx/stargazers) | Rust, WebAssembly | Application deployment runtime for Confidential Computing enclaves (Intel SGX, AMD SEV) utilizing WebAssembly to isolate untrusted infrastructure from sensitive multi-party analytical workloads. |
+| **[tf-encrypted/tf-encrypted](https://github.com/tf-encrypted/tf-encrypted)** | [![Stars](https://img.shields.io/github/stars/tf-encrypted/tf-encrypted)](https://github.com/tf-encrypted/tf-encrypted/stargazers) | Python, TensorFlow | Framework for privacy-preserving machine learning in TensorFlow, executing secure multi-party computation (MPC) and encrypted tensor operations across multiple un-trusted participants. |
+| **[data61/MP-SPDZ](https://github.com/data61/MP-SPDZ)** | [![Stars](https://img.shields.io/github/stars/data61/MP-SPDZ?style=social&color=white)](https://github.com/data61/MP-SPDZ/stargazers) | C++, Python | Versatile benchmarking and deployment library for multi-party computation protocols (SPDZ, MASCOT, Semi2k), allowing private multiparty aggregation and secure table joins. |
+| **[IBM/differential-privacy-library](https://github.com/IBM/differential-privacy-library)** | [![Stars](https://img.shields.io/github/stars/IBM/differential-privacy-library?style=social&color=white)](https://github.com/IBM/differential-privacy-library/stargazers) | Python | Diffprivlib is a general-purpose Python library for differential privacy, offering DP-compliant Scikit-Learn estimators, machine learning models, and privacy budget management. |
+| **[apache/teaclave](https://github.com/apache/teaclave)** | [![Stars](https://img.shields.io/github/stars/apache/teaclave?style=social&color=white)](https://github.com/apache/teaclave/stargazers) | Rust, Intel SGX | Apache universal secure computing platform providing a confidential computing FaaS engine to securely execute multi-party data processing inside hardware enclaves. |
+| **[gramineproject/gramine](https://github.com/gramineproject/gramine)** | [![Stars](https://img.shields.io/github/stars/gramineproject/gramine?style=social&color=white)](https://github.com/gramineproject/gramine/stargazers) | C, Rust | Lightweight LibOS tailored for Intel SGX and TDX enclaves, allowing unmodified Linux applications and database engines to run securely inside hardware confidential computing partitions. |
+| **[edgelesssys/ego](https://github.com/edgelesssys/ego)** | [![Stars](https://img.shields.io/github/stars/edgelesssys/ego?style=social&color=white)](https://github.com/edgelesssys/ego/stargazers) | Go, C | Open-source SDK to build, verify, and run confidential applications in Go inside hardware enclaves with automated attestation and end-to-end payload encryption. |
+| **[OpenMined/PyDP](https://github.com/OpenMined/PyDP)** | [![Stars](https://img.shields.io/github/stars/OpenMined/PyDP?style=social&color=white)](https://github.com/OpenMined/PyDP/stargazers) | Python, C++ | Python bindings for Google's differential privacy C++ library, providing simplified statistical primitives (mean, median, variance, quantile) with rigorous DP noise injection. |
+| **[opendp/opendp](https://github.com/opendp/opendp)** | [![Stars](https://img.shields.io/github/stars/opendp/opendp?style=social&color=white)](https://github.com/opendp/opendp/stargazers) | Rust, Python | Community differential privacy platform organized by Harvard Privacy Tools Project, providing mathematically vetted building blocks for differential privacy measurement and privacy budgets. |
+| **[tiktok-privacy-innovation/PrivacyGo-DataCleanRoom](https://github.com/tiktok-privacy-innovation/PrivacyGo-DataCleanRoom)** | [![Stars](https://img.shields.io/github/stars/tiktok-privacy-innovation/PrivacyGo-DataCleanRoom?style=social&color=white)](https://github.com/tiktok-privacy-innovation/PrivacyGo-DataCleanRoom/stargazers) | Go, C++, GCP | End-to-end TEE-based open-source Data Clean Room framework open-sourced by TikTok; features a two-stage Programming/Execution architecture, JWT attestation verification, and isolated confidential VMs. |
+| **[Penncil/pda](https://github.com/Penncil/pda)** | [![Stars](https://img.shields.io/github/stars/Penncil/pda?style=social&color=white)](https://github.com/Penncil/pda/stargazers) | R, C++ | Privacy-Preserving Distributed Algorithms for multi-site healthcare and biostatistics; computes lossless federated generalized linear models and survival curves by transferring only summary gradients. |
+| **[aws-solutions/data-connectors-for-aws-clean-rooms](https://github.com/aws-solutions/data-connectors-for-aws-clean-rooms)** | [![Stars](https://img.shields.io/github/stars/aws-solutions/data-connectors-for-aws-clean-rooms?style=social&color=white)](https://github.com/aws-solutions/data-connectors-for-aws-clean-rooms/stargazers) | Python, CDK, AWS | Reference architecture and pre-built connectors to automate ingestion, schema normalization, and cryptographic hashing into AWS Clean Rooms from diverse CRM and marketing sources. |
+
+---
+
+## Architecture & Platform Taxonomy
+
+Understanding the technical boundaries of Data Clean Rooms prevents vendor misalignment:
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│                          DATA CLEAN ROOM ARCHITECTURES                      │
+├─────────────────────┬──────────────────────┬────────────────────────────────┤
+│ Native Cloud DCRs   │ Decentralized Nodes  │ TEE Confidential Enclaves      │
+│ (Snowflake, AWS)    │ (InfoSum)            │ (PrivacyGo, Decentriq)         │
+├─────────────────────┼──────────────────────┼────────────────────────────────┤
+│ • Compute moved to  │ • Zero data movement │ • Hardware isolation           │
+│   central storage   │ • Bunkers store math │   (Intel SGX / AMD SEV)        │
+│ • SQL access policy │   signatures only    │ • Remote attestation           │
+│ • Consumption-based │ • Private contracts  │ • Complete crypto security     │
+└─────────────────────┴──────────────────────┴────────────────────────────────┘
+```
+
+1. **Managed Cloud Clean Rooms (Snowflake, AWS, Google ADH):**
+   - Provide turnkey identity resolution, managed SQL governance, and direct linkage to first-party cloud data warehouses.
+   - Ideal for production campaigns and cross-partner audience activation, but bill via ongoing compute consumption.
+2. **Decentralized Data Collaboration (InfoSum, Optable):**
+   - Eliminate central data centralization entirely. Partners hold data in isolated "bunkers" or local edge nodes; queries evaluate aggregate statistical overlap without sharing raw user IDs.
+3. **Hardware Enclaves & TEEs (Decentriq, PrivacyGo, Teaclave):**
+   - Execute analytical workloads inside cryptographic hardware enclaves (Intel SGX, AMD SEV). Memory is encrypted at runtime; untrusted cloud hosts and operators cannot inspect memory contents.
+4. **Federated Learning & Differential Privacy (PySyft, Flower, OpenDP, Google DP):**
+   - Mathematical privacy models where models or statistical algorithms train locally at each edge node, returning aggregated gradient updates with added calibrated noise to mathematically prevent record re-identification.
+
+---
+
+## How to Contribute
+
+We welcome community contributions, open-source tool additions, and vendor pricing updates!
+
+1. Fork this repository.
+2. Create a new branch: `git checkout -b feature/add-new-dcr-platform`.
+3. Update `README.md` following the established tabular format (include license, GitHub star badge, and explicit pricing/free-tier details).
+4. Commit your changes and open a Pull Request.
+
+---
+
+## Disclaimer
+
+- This list is community-curated for informational and architectural evaluation purposes.
+- Mention of specific commercial products or open-source repositories does not constitute legal endorsement or certification of compliance with GDPR, CCPA, HIPAA, or other data privacy regulations.
+- Cloud compute costs, API licenses, and enterprise contract terms are subject to change by their respective providers. Always verify specific terms directly with vendor account teams.
