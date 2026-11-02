@@ -8,7 +8,7 @@
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://awesome.re/badge.svg" alt="Awesome List" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics?style=social" alt="GitHub Stars" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics?style=social" alt="GitHub_Stars" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics?style=social" alt="GitHub Forks" /></a>
   <a href="https://github.com/ishandutta2007/Awesome-Data-Clean-Room-Privacy-Preserving-Analytics/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License" /></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -60,9 +60,9 @@ The table below outlines key commercial Data Clean Room platforms, sorted by **C
 
 Curated list of open-source data clean room engines, confidential computing runtimes, federated learning frameworks, and differential privacy libraries. 🌟
 
-Repositories are sorted by **GitHub Stars (Descending)**.
+Repositories are sorted by **GitHub_Stars (Descending)**.
 
-| Project / Repository | GitHub Stars (Desc) | Technology & Ecosystem | Primary Architecture & Description |
+| Project / Repository | GitHub_Stars (Desc) | Technology & Ecosystem | Primary Architecture & Description |
 | :--- | :---: | :--- | :--- |
 | **[OpenMined/PySyft](https://github.com/OpenMined/PySyft)** | [![Stars](https://img.shields.io/github/stars/OpenMined/PySyft?style=social&color=white)](https://github.com/OpenMined/PySyft/stargazers) | Python, Domain Networks | 🧠 Federated data governance framework enabling data scientists to query remote, protected datasets using Differential Privacy and secure remote computation without seeing raw records. |
 | **[flwrlabs/flower](https://github.com/flwrlabs/flower)** | [![Stars](https://img.shields.io/github/stars/flwrlabs/flower?style=social&color=white)](https://github.com/flwrlabs/flower/stargazers) | Python, C++, Mobile/Edge | 🌸 Unified federated AI and analytics framework designed to scale privacy-preserving model training and compute workloads across millions of distributed edge clients and multi-tenant data silos. |
@@ -122,7 +122,7 @@ We welcome community contributions, open-source tool additions, and vendor prici
 
 1. 🍴 Fork this repository.
 2. 🌿 Create a new branch: `git checkout -b feature/add-new-dcr-platform`.
-3. 📝 Update `README.md` following the established tabular format (include license, GitHub star badge, and explicit pricing/free-tier details).
+3. 📝 Update `README.md` following the established tabular format (include license, GitHub Stars_Badge, and explicit pricing/free-tier details).
 4. 🚀 Commit your changes and open a Pull Request.
 
 ---
